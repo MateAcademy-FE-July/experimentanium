@@ -114,8 +114,53 @@ a {
 }
 
 
-
 #map {
     width: 40%;
     height: 51rem;
+}
+
+@media (max-width:$xlg_min) {
+    .info {
+        &__location{
+            padding: 3rem 1rem;
+        }
+        &__form {
+            padding: 3rem 1rem; 
+        }
+    }
+    #map {
+        width: 40%;
+        height: 55rem;
+    }    
+}
+
+@media (max-width:$lg_min) {
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        &__location {
+            width: 50%;
+            order: 3;
+        }
+        &__form {
+            padding: 10rem;
+            width: 100%;
+            order: 1;
+        }
+    }
+
+    .location {
+        &__address{
+            margin-bottom: 1rem;
+        }
+        &__open-time{
+           
+        }
+    }
+
+    #map {
+        width: 50%;
+        height: 55rem;
+        order: 2;
+    } 
 }
