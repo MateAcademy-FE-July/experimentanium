@@ -37,7 +37,7 @@
   }
 
   &__search {
-    color: $color_social;
+    color: #ffffff;
 
     .icon__search {
       font-size: 1.5rem;
@@ -148,7 +148,7 @@
   }
 
   &__menu li {
-    color: $color_white;
+    color: #fff;
     font-size: 3rem;
     line-height: 4rem;
     font-weight: 300;
@@ -166,7 +166,7 @@
     margin: 4rem;
 
     span {
-      background: $color_white;
+      background: #fff;
     }
   }
 }
