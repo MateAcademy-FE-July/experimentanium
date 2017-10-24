@@ -1,5 +1,10 @@
-.info  {
-    height: 100px;
-    width: 100px;
-background: #000;
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding: 7rem;
+    &__address{
+        width: 20%;
+        background-color: $color_purple;
+        
+    }
 }
