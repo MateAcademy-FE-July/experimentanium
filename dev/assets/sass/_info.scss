@@ -2,8 +2,11 @@
     display: flex;
     justify-content: space-between;
     padding: 7rem;
+} 
+.location {
+    width: 20%;
     &__address{
-        width: 20%;
+        
         background-color: $color_purple;
         
     }
