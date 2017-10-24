@@ -1,13 +1,121 @@
+.nomargin {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 .info {
     display: flex;
     justify-content: space-between;
-    padding: 7rem;
-} 
-.location {
-    width: 20%;
-    &__address{
-        
+    font: {
+        family: $primary_font;
+        size: 1.8rem;
+        weight: 600;
+    }
+    color: $secondary_color;
+    &__location{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25%;
         background-color: $color_purple;
+        padding: 4rem 5rem 0;
+        text-align: center;     
+    }
+    &__form {
+        width: 35%;
+        padding: 4rem;
+        background-color: $orange_color;
         
     }
+} 
+.location {
+    &__address{
+        margin-bottom: 3rem;
+    }
+    &__open-time{
+        @extend .location__address;
+    }
+}
+
+.address{
+    &__destination {
+        text-transform: uppercase;
+    }
+}
+
+.open-time {
+    &__header {
+        margin-bottom: 2rem;        
+    }
+    &__first-day{
+        text-transform: uppercase;
+    }
+}
+
+.contacts{
+    &__header {
+        margin-bottom: 2rem; 
+    }
+    &__phone-numbers {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+}
+
+.form {
+    &__visit-inf {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.visit-inf {
+    &__header{
+        text-transform: uppercase;
+        font: {
+            family: $primary_font;
+            size: 1.8rem;
+            weight: 600;
+        }
+    }
+    &__date {
+        padding: 2rem;
+        border: 0.1rem solid #b8b8b8;
+    }
+    &__time-quantity {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__time {
+        width: 35%;
+        @extend .visit-inf__date;
+    }
+    &__quantity {
+        @extend .visit-inf__time;
+    }
+    &__reserve {
+        width: 50%;
+        padding: 2rem;
+        background-color: $orange_color;
+        border: 0.1rem solid $bgcolor;
+        color: $bgcolor;
+        font: {
+            size: 1.8rem;
+            weight: 600;
+        }
+        text-transform: uppercase;
+    }
+}
+
+
+
+#map {
+    width: 40%;
+    height: 51rem;
 }
