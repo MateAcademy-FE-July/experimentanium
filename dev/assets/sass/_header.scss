@@ -1,13 +1,6 @@
 .header {
   background: $bgcolor;
   margin-bottom: 0;
-
-  &__column {
-    align-self: center;
-
-    &--right {  
-      text-align: right;
-    }
   &__additional{
     padding-top: 5rem;
     padding-bottom: 2.5rem;
