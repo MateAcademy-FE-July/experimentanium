@@ -3,37 +3,56 @@
     background-color: $color_purple;
     
     &__content {
-        max-width: 1450px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 80px 65px;
+        padding: 8vh 10vh 0 10vh;
         display: flex;
         flex-flow: row nowrap;
-        align-items: stretch;
-    }
-
-    &__action {
-        width: 33%;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-    }
-
-    &__logo {
+        align-items: flex-start;
         position: relative;
+
+        @media (max-width:991px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__image {
         position: absolute;
-        top: -25px;
+        top: 5vh;
+
+        @media (max-width:991px) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__action {
+        width: 45%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding-right: 3%;
+
+        @media (max-width:991px) {
+            width: 100%;
+            flex-flow: row nowrap;
+            padding-top: 15vh;
+        }
     }
 
     &__header {
         padding-left: 115px;
+        padding-bottom: 10vh;
         font-family: $secondary_font;
         font-size: 1.2em;
         font-weight: 700;
         line-height: 2rem;
         color: $bgcolor;
+
+        @media (max-width:991px) {
+            padding-left: 0;
+            line-height: 3rem;
+        }
     }
 
     &__header span {
@@ -42,10 +61,18 @@
     }
 
     &__c-menu {
-        width: 67%;
+        //width: 67%;
         display: flex;
         flex-flow: row wrap;
-        justify-content: flex-start;
+        
+        @media (max-width:991px) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__subscribe {
+        padding-bottom: 10vh;
     }
 
     &__form {
@@ -103,7 +130,7 @@
 .c-menu {
     
     &__item {
-        width: 25%;
+        //width: 25%;
         padding-right: 35px;
         padding-bottom: 35px;
         li {
@@ -119,4 +146,3 @@
         color: $secondary_color;
     }
 }
-
