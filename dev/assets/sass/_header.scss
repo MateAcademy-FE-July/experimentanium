@@ -1,6 +1,7 @@
 .header {
   background: $bgcolor;
   margin-bottom: 0;
+  padding-bottom: 5rem;
   &__additional{
     padding-top: 5rem;
     padding-bottom: 2.5rem;
@@ -28,10 +29,11 @@
     padding-left: 9rem;
   }
 }
-.header{
+.header__main{
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  padding-top: 1rem;
 }
 .nav{
   display: flex;
@@ -56,7 +58,6 @@
 .logo{
   display: flex;
   &__img{
-    width: 120px;
     padding-right: 2.5rem;
   }
   &__text{
@@ -126,17 +127,45 @@
   top: 20px;
   transform: rotate(-45deg); 
 }
-@media screen and (max-width: 1024px){
+.nav__tickets{
+  display: none;
+}
+@media screen and (max-width:576px){
+  .logo__img{
+    padding-right: 0;
+  }
+}
+@media screen and (min-width:993px) and (max-width:1153px){
+  .nav__item{
+    font-size: 1.1rem;
+  }
+  .header__buy--button{
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 992px){
+  .nav__link:hover{
+    color: #000;
+  }
+  .additional{
+    display: none;
+  }
   .container{
-    padding: 0;
-    width: 100%;
+    width:100%;
   }
   .header{
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    z-index: 15;
     &__additional{
       justify-content: center;
       padding-top: 1rem;
     }
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0;
   }
   .nav__items{
 
@@ -150,31 +179,37 @@
     display: none;
   }
   .menu{
-    right: 0;
-    width: 120%;
+    top:100%;
+    width: 100%;
     position: absolute;
-    top: -700px;
-    transition: 1.5s;
+    left: -100rem;
+    transition: 1s;
+    background: $color_purple;
+    height: 100vh;
   }
   .burger{
-    float: right;
     display: block;
+   margin-left: auto;
+   margin-top: 3rem;
+   z-index: 15;
     
   }
   .nav li{
     display: block;
     background: $color_purple;
-    opacity: 0.8;
+    opacity: 1;
     z-index: 4;
-    height: 70px;
+    padding: 2rem;
     text-align: center;
 
   }
   .menu.show{
-    top: 75%;
-    right: 0;
+    top: 100%;
+    left: 0%;
     transition: 1s;
     width: 100%;
+    z-index: 0;
+   
   }
 
 }
