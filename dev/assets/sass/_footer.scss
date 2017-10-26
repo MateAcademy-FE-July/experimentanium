@@ -15,8 +15,9 @@
     }
     &__image {
         position: absolute;
-        top: 5vh;
+        top: 50px;
         @media (max-width: 992px) {
+            top: 25px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -30,17 +31,14 @@
         @media (max-width: 992px) {
             width: 100%;
             flex-flow: row nowrap;
-            padding-top: 20vh;
+            padding-top: 80px;
             padding-right: 0;
-        }
-        @media (max-width: 768px) {
-            
         }
         @media (max-width:576px) {
             flex-flow: column wrap;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
-            padding-bottom: 10vh;
+            padding-bottom: 30px;
             text-align: center;
         }
     }
@@ -57,7 +55,7 @@
     }
     &__header {
         padding-left: 115px;
-        padding-bottom: 10vh;
+        padding-bottom: 80px;
         font-family: $secondary_font;
         font-size: 1.2em;
         font-weight: 700;
@@ -65,7 +63,7 @@
         color: $bgcolor;
         @media (max-width: 992px) {
             padding-left: 0;
-            padding-right: 0px;
+            padding-bottom: 60px;
             font-size: 1.1em;
             line-height: 3rem;
         }
@@ -80,7 +78,7 @@
     &__header span {
         font-size: 0.8em;
         font-weight: 400;
-        @media (max-width:768px) {
+        @media (max-width: 768px) {
             //font-size: 0.7em;
         }
     }
@@ -94,10 +92,10 @@
         }
     }
     &__subscribe {
-        padding-bottom: 10vh;
+        padding-bottom: 80px;
         @media (max-width: 992px) {
             line-height: 3rem;
-            padding-right: 0;
+            padding-bottom: 60px;
         }
         @media (max-width:768px) {
             padding-right: 35px;
@@ -109,11 +107,6 @@
     &__form {
         display: flex;
         flex-flow: row nowrap;
-    }
-    &__social {
-        @media (max-width: 992px) {
-            line-height: 3rem;
-        }
     }
     &__input {
         width: 85%;
@@ -130,7 +123,7 @@
     }
     &__input::-webkit-input-placeholder {
         color: $secondary_color;
-        @media (max-width:768px) {
+        @media (max-width: 768px) {
             font-size: 0;
         }
     }
@@ -150,6 +143,14 @@
         margin-right: 15px;
         text-decoration: none;
         color: $secondary_color;
+    }
+    &__social {
+        @media (max-width: 992px) {
+            line-height: 3rem;
+        }
+        @media (max-width:576px) {
+            padding-bottom: 40px;
+        }
     }
 }
 
