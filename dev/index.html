@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Blank Template</title> 
+  <title>Blank Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,700|Roboto|Roboto+Condensed:400,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,700|Roboto|Roboto+Condensed:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
@@ -59,171 +61,259 @@
     		</header>
     	</div>
     </header>
+    <section class="section tickets">
+      <div class="tickets__container">
+        <div class="tickets__container--left">
+          <div class="container">
+            <div class="tickets__title">
+              <a href="#" class="tickets__link tickets__link--angle">
+                <i class="fa fa-angle-left icon--angle" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="tickets__link">освітні програми /</a>
+              <a href="#" class="tickets__link"> лекції /</a>
+              <a href="#" class="tickets__link tickets__link--white"> дифузія</a>
+            </div>
+          </div>
+        </div>
+        <div class="tickets__container--main">
+          <div class="tickets__block">
+            <div class="tickets__photo">
+              <img src="../../assets/img/tickets-img.png" alt="tickets-img" class="tickets__img">
+              <div class="tickets__caption caption">
+                <div class="caption__col">
+                  <span class="caption__title">Коли</span>
+                  <p class="caption__sub">ВТ, СР, ЧТ 12:00, 16:00</p>
+                </div>
+                <div class="caption__col">
+                  <span class="caption__title">Тривалість:</span>
+                  <p class="caption__sub">120 хв</p>
+                </div>
+                <div class="caption__col">
+                  <span class="caption__title">Ціна:</span>
+                  <p class="caption__sub">від 250 грн.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tickets__block tickets__block--right">
+            <div class="tickets__tabs tabs">
+              <ul class="tabs__caption">
+                <li class="tabs__link">Інформація</li>
+                <li class="tabs__link">відгуки (2)</li>
+                <li class="tabs__link active">квитки</li>
+              </ul>
+              <div class="tabs__content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem molestias soluta nisi impedit ut iste accusantium
+                  ad quod esse omnis!</p>
+              </div>
+              <div class="tabs__content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem molestias soluta nisi impedit ut iste accusantium
+                  ad quod esse omnis!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem molestias soluta nisi impedit ut iste accusantium
+                  ad quod esse omnis!</p>
+              </div>
+              <div class="tabs__content active">
+                <div class="tabs__item">
+                  <p class="tabs__name">Діти до 6 років</p>
+                  <p class="tabs__price">250 грн</p>
+                  <button type="submit" class="tabs__btn btn">Квитки</button>
+                </div>
+                <div class="tabs__item">
+                  <p class="tabs__name">Діти від 6 до 18 років</p>
+                  <p class="tabs__price">350 грн</p>
+                  <button type="submit" class="tabs__btn btn">Квитки</button>
+                </div>
+                <div class="tabs__item">
+                  <p class="tabs__name">Дорослі</p>
+                  <p class="tabs__price">400 грн</p>
+                  <button type="submit" class="tabs__btn btn">Квитки</button>
+                </div>
+                <div class="tabs__item">
+                  <p class="tabs__name">Студенти</p>
+                  <p class="tabs__price">400 грн</p>
+                  <button type="submit" class="tabs__btn btn">Квитки</button>
+                </div>
+                <div class="tabs__item">
+                  <p class="tabs__name">Групи до 10 чоловік</p>
+                  <p class="tabs__price">200 грн (з особи)</p>
+                  <button type="submit" class="tabs__btn btn">Квитки</button>
+                </div>
+                <div class="tabs__item">
+                  <p class="tabs__name">Групи від 11 чоловік</p>
+                  <p class="tabs__price">150 грн (з особи)</p>
+                  <button type="submit" class="tabs__btn btn">Квитки</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+        <div class="info__location">
+            <div class="location__address address">
+                <p class="address__header">Чекаємо вас за адресою:</p>
+                <p class="address__destination">м. Київ, вул. Верхній Вал 2А</p>
+            </div>
+            <div class="location__open-time open-time">
+                <p class="open-time__header">Графік роботи музею:</p>
+                <p class="open-time__first-day">пн-вихідний</p>
+                <p class="open-time__work-days">вт-пт: 09:30 - 19:00</p>
+                <p class="open-time__last-day">сб-нд, свята: 10:00 - 20:00</p>
+            </div>
+        </div>
+        <div class="info__map">
+        </div>   
+        <div class="info__form from">
+            <form action="" class="form__visit-inf visit-inf">
+                <p class="visit-inf__header">Запланувати візит</p>
+                <input type="text" class="visit-inf__date" placeholder="Enter the date 01/01/2000">
+                <div class="visit-inf__time-quantity">
+                    <input type="text" class="visit-inf__time" placeholder="Enter the time">
+                    <input type="text" class="visit-inf__quantity" placeholder="Enter the quantity">
+                </div>
+                <button class="visit-inf__reserve" type="submit">забронювати</button>            
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__action">
+                <div class="footer__logo">
+                    <div class="footer__image">
+                        <img src="./assets/img/experimentanium__logo.png" alt="Experimentanium logo">
+                    </div>
+                    <h2 class="footer__header">Експериментаніум</br>
+                        <span>музей популярної науки і техніки</span>
+                    </h2>
+                </div>
+                <div class="footer__subscribe">
+                    <h3 class="footer__title">підписатись на новини</h3>
+                    <form class="footer__form">
+                        <input class="footer__input" type="email" placeholder="Введіть e-mail" id="">
+                        <input class="footer__submit" type="submit" value="">
+                    </form>
+                </div>
+                <div class="footer__social">
+                    <h3 class="footer__title">ми в соціальних мережах</h3>
+                    <div class="footer__s-icons">
+                        <a href="#" class="footer__s-link">
+                            <img src="./assets/img/fb.png" alt="facebook" class="footer__s-image">
+                        </a>
+                        <a href="#" class="footer__s-link">
+                            <img src="./assets/img/twitter.png" alt="twitter" class="footer__s-image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__c-menu c-menu">
+                <ul class="c-menu__item">
+                    <h3 class="c-menu__title">експозиція та шоу</h3>
+                    <li>
+                        <a class="c-menu__link" href="#">Шоу в музеї</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Експозиція музею</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Виїздні шоу</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">3Д тур</a>
+                    </li>
+                </ul>
+                <ul class="c-menu__item">
+                    <h3 class="c-menu__title">новини</h3>
+                    <li>
+                        <a class="c-menu__link" href="#">Новини музею</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Новини зі світу науки</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Анонси</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Акції</a>
+                    </li>
+                </ul>
+                <ul class="c-menu__item">
+                    <h3 class="c-menu__title">освітні програми</h3>
+                    <li>
+                        <a class="c-menu__link" href="#">Шкільні екскурсії</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Наукові гуртки</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Лекції</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Майстер-класи</a>
+                    </li>
+                </ul>
+                <ul class="c-menu__item">
+                    <h3 class="c-menu__title">оргранізація заходів</h3>
+                    <li>
+                        <a class="c-menu__link" href="#">День народження</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Корпоративні заходи</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Оренда приміщень</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Кафе</a>
+                    </li>
+                </ul>
+                <ul class="c-menu__item">
+                    <h3 class="c-menu__title">про нас</h3>
+                    <li>
+                        <a class="c-menu__link" href="#">Про музей</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Правила поведінки</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Відгуки</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Благодійність</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">FAQ</a>
+                    </li>
+                </ul>
+                <ul class="c-menu__item">
+                    <h3 class="c-menu__title">музей</h3>
+                    <li>
+                        <a class="c-menu__link" href="#">Квитки</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Магазин</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Вакансії</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Фото та відео</a>
+                    </li>
+                    <li>
+                        <a class="c-menu__link" href="#">Подяки</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/assets/scripts/libs/jquery-3.2.1.min.js"><\/script>')</script>
+    
+    <script src="./assets/scripts/common.js"></script>
+    <script src="./assets/scripts/tabs.js"></script>
   </div>
-  
-  <section class="info">
-      <div class="info__location">
-          <div class="location__address address">
-              <p class="address__header">Чекаємо вас за адресою:</p>
-              <p class="address__destination">м. Київ, вул. Верхній Вал 2А</p>
-          </div>
-          <div class="location__open-time open-time">
-              <p class="open-time__header">Графік роботи музею:</p>
-              <p class="open-time__first-day">пн-вихідний</p>
-              <p class="open-time__work-days">вт-пт: 09:30 - 19:00</p>
-              <p class="open-time__last-day">сб-нд, свята: 10:00 - 20:00</p>
-          </div>
-      </div>
-      <div class="info__map">
-      </div>   
-      <div class="info__form from">
-          <form action="" class="form__visit-inf visit-inf">
-              <p class="visit-inf__header">Запланувати візит</p>
-              <input type="text" class="visit-inf__date" placeholder="Enter the date 01/01/2000">
-              <div class="visit-inf__time-quantity">
-                  <input type="text" class="visit-inf__time" placeholder="Enter the time">
-                  <input type="text" class="visit-inf__quantity" placeholder="Enter the quantity">
-              </div>
-              <button class="visit-inf__reserve" type="submit">забронювати</button>            
-          </form>
-      </div>
-  </section>
-  <footer class="footer">
-      <div class="footer__content">
-          <div class="footer__action">
-              <div class="footer__logo">
-                  <div class="footer__image">
-                      <img src="./assets/img/experimentanium__logo.png" alt="Experimentanium logo">
-                  </div>
-                  <h2 class="footer__header">Експериментаніум</br>
-                      <span>музей популярної науки і техніки</span>
-                  </h2>
-              </div>
-              <div class="footer__subscribe">
-                  <h3 class="footer__title">підписатись на новини</h3>
-                  <form class="footer__form">
-                      <input class="footer__input" type="email" placeholder="Введіть e-mail" id="">
-                      <input class="footer__submit" type="submit" value="">
-                  </form>
-              </div>
-              <div class="footer__social">
-                  <h3 class="footer__title">ми в соціальних мережах</h3>
-                  <div class="footer__s-icons">
-                      <a href="#" class="footer__s-link">
-                          <img src="./assets/img/fb.png" alt="facebook" class="footer__s-image">
-                      </a>
-                      <a href="#" class="footer__s-link">
-                          <img src="./assets/img/twitter.png" alt="twitter" class="footer__s-image">
-                      </a>
-                  </div>
-              </div>
-          </div>
-          <div class="footer__c-menu c-menu">
-              <ul class="c-menu__item">
-                  <h3 class="c-menu__title">експозиція та шоу</h3>
-                  <li>
-                      <a class="c-menu__link" href="#">Шоу в музеї</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Експозиція музею</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Виїздні шоу</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">3Д тур</a>
-                  </li>
-              </ul>
-              <ul class="c-menu__item">
-                  <h3 class="c-menu__title">новини</h3>
-                  <li>
-                      <a class="c-menu__link" href="#">Новини музею</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Новини зі світу науки</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Анонси</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Акції</a>
-                  </li>
-              </ul>
-              <ul class="c-menu__item">
-                  <h3 class="c-menu__title">освітні програми</h3>
-                  <li>
-                      <a class="c-menu__link" href="#">Шкільні екскурсії</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Наукові гуртки</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Лекції</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Майстер-класи</a>
-                  </li>
-              </ul>
-              <ul class="c-menu__item">
-                  <h3 class="c-menu__title">оргранізація заходів</h3>
-                  <li>
-                      <a class="c-menu__link" href="#">День народження</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Корпоративні заходи</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Оренда приміщень</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Кафе</a>
-                  </li>
-              </ul>
-              <ul class="c-menu__item">
-                  <h3 class="c-menu__title">про нас</h3>
-                  <li>
-                      <a class="c-menu__link" href="#">Про музей</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Правила поведінки</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Відгуки</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Благодійність</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">FAQ</a>
-                  </li>
-              </ul>
-              <ul class="c-menu__item">
-                  <h3 class="c-menu__title">музей</h3>
-                  <li>
-                      <a class="c-menu__link" href="#">Квитки</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Магазин</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Вакансії</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Фото та відео</a>
-                  </li>
-                  <li>
-                      <a class="c-menu__link" href="#">Подяки</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </footer>
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="/assets/scripts/libs/jquery-3.2.1.min.js"><\/script>')</script>
-  
-  <script src="./assets/scripts/common.js"></script>
 </body>
 </html>
