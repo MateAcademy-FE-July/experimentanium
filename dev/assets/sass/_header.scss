@@ -46,13 +46,17 @@
     font-size: 1.4rem;
     font-weight: bold;
   }
+  &__link:hover{
+    cursor: pointer;
+    color: $color_purple;
+  }
 }
 
   
 .logo{
   display: flex;
   &__img{
-    width: 100px;
+    width: 120px;
     padding-right: 2.5rem;
   }
   &__text{
@@ -70,10 +74,107 @@
   display: flex;
   align-items: center;
   &--button{
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    font-size: 1.4rem;
     color: $color_purple;
     text-transform: uppercase;
     background: #fff;
     border: 2px solid $color_purple;
     padding: 2rem 5rem;
   }
+}
+.burger{
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: $color_purple;
+  cursor: pointer;
+  &__line{
+    position: absolute;
+    left: 10%;
+    height: 3px;
+    background:#fff;
+    border-radius: 5px;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    &--top{
+      top: 8px;
+      transition: 1s;
+    }
+    &--middle{
+      top: 18px;
+      transition: 1s;
+    }
+    &--bottom{
+      top: 28px;
+      transition: 1s;
+    }
+  }
+}
+.burger.active .burger__line--top{
+  top: 20px;
+  transform: rotate(45deg); 
+}
+.burger.active .burger__line--middle{
+  top: 15px;
+  opacity: 0;
+}
+.burger.active .burger__line--bottom{
+  top: 20px;
+  transform: rotate(-45deg); 
+}
+@media screen and (max-width: 1024px){
+  .container{
+    padding: 0;
+    width: 100%;
+  }
+  .header{
+    justify-content: center;
+    &__additional{
+      justify-content: center;
+      padding-top: 1rem;
+    }
+  }
+  .nav__items{
+
+    flex-direction: column;
+  }
+  .nav__item{
+    width: 100%;
+
+  }
+  .header__buy{
+    display: none;
+  }
+  .menu{
+    right: 0;
+    width: 120%;
+    position: absolute;
+    top: -700px;
+    transition: 1.5s;
+  }
+  .burger{
+    float: right;
+    display: block;
+    
+  }
+  .nav li{
+    display: block;
+    background: $color_purple;
+    opacity: 0.8;
+    z-index: 4;
+    height: 70px;
+    text-align: center;
+
+  }
+  .menu.show{
+    top: 75%;
+    right: 0;
+    transition: 1s;
+    width: 100%;
+  }
+
 }
