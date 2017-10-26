@@ -19,7 +19,7 @@
   }
   &__link {
     text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $third_font;
     color: #b2b2b2;
     font-size: 15px;
     font-weight: 600;
@@ -48,8 +48,8 @@
 
 .caption {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 10px 0;
+  justify-content: space-around;
+  padding-top: 20px;
   background: #7b3fb3;
   width: 100%;
   color: #ffffff;
@@ -68,7 +68,8 @@
 }
 
 .tabs {
-  width: 700px;
+  max-width: 700px;
+  width: 100%;
   &__caption {
     display: flex;
     text-transform: uppercase;
@@ -148,7 +149,7 @@
   }
 }
 
-@media (max-width: 1199px) {
+@include respond-to(xl) {
   .tabs {
     width: 400px;
     &__caption {
@@ -163,49 +164,7 @@
   }  
 }
 
-@media (max-width: 1010px) {
-  .tickets {
-    &__container {
-      &--main {
-        left: 70px;
-        top: 125px;
-      }
-    }
-    &__block {
-      &--right {
-        margin: 0;
-      }
-    }
-  }
-  .tabs {
-    &__name {
-      font-size: 14px;
-    }
-    &__price {
-      font-size: 16px;
-    }
-    &__btn {
-      font-size: 12px;
-      height: 30px;
-    }
-  }
-}
-
-@media (max-width: 890px) { 
-  .tabs {
-    width: auto;
-  }
-  .caption {
-    &__title {
-      font-size: 14px;
-    }
-    &__sub {
-      font-size: 14px;
-    }
-  }
-}
-
-@media (max-width: 810px) {
+@include respond-to(lg) {
   .tickets {
     &__container {
       &--left {
@@ -217,22 +176,58 @@
         flex-direction: column;
       }
     }
+    &__title {
+      padding-bottom: 20px;
+    }
+    &__img {
+      height: 400px;
+      width: 50%;      
+    }
+    &__photo {
+      flex-direction: row;
+    }
+    &__caption {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .caption__col {
+    width: 100%;
   }
   .tabs {
-    
+    width: auto;
+    margin: 0 auto;
     &__caption {
       margin-top: 20px;
+    }
+    &__btn {
+      visibility: visible;
+    }
+    &__item {
+      &:hover {
+        background: #ffffff;
+      }
     }
   }
 }
 
-@media (max-width: 450px) {
+@include respond-to(sm) {
   .tabs {
-    &__btn {
-      padding: 0;
-    }
     &__caption {
       font-size: 16px;
     }
+    &__name {
+      font-size: 14px;
+    }
+    &__price {
+      font-size: 16px;
+    }
+    &__btn {
+      font-size: 12px;
+      height: 30px;
+      padding: 0 20px;
+    }
   }
 }
+
+

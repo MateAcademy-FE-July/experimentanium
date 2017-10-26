@@ -173,3 +173,16 @@ $retina-suffix: '@2x';
 		}
 	}
 }
+
+@mixin respond-to($grid-breakpoint) { 
+  @if map-has-key($grid-breakpoints, $grid-breakpoint) {
+    @media (max-width: #{map-get($grid-breakpoints, $grid-breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$grid-breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
