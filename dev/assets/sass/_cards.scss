@@ -1,0 +1,29 @@
+.container-cards{
+    max-width: 530px;
+    margin-top: 20px;
+}
+.tickets-card{
+    width: 100%;
+    background-color: $color_purple;
+    color: $secondary_color;
+    font-family: $primary_font;
+    padding: 114px 67px 25px 60px;
+
+    &__title{
+        font-size: 25px;
+        color: $secondary_color;
+        padding-bottom: 55px;
+        
+    }
+    &__btn{
+        display: inline-block;
+        margin-bottom: 60px;        
+        padding: 14px 50px;
+        background-color: $color_purple;
+        color: $secondary_color;
+        font-family: $logo_font;
+        text-transform: uppercase;
+        border: 2px solid $secondary_color;
+        
+    }
+}
