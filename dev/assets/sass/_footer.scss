@@ -2,9 +2,9 @@
     max-width: 100%;
     background-color: $color_purple;
     &__content {
-        max-width: 1250px;
+        max-width: 1300px;
         margin: 0 auto;
-        padding: 8vh 10vh 0 10vh;
+        padding-top: 8vh;
         display: flex;
         flex-flow: row nowrap;
         align-items: flex-start;
