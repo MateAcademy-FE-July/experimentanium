@@ -32,3 +32,4 @@ node_modules
 package-lock.json
 dev/assets/css/main.css
 dev/index.html
+dev/main.html

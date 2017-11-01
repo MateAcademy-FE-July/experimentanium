@@ -1,0 +1,40 @@
+.news {
+    max-width: 100%;
+    &__content {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 8vh 15px 0 15px;
+        display: flex;
+        flex-flow: row nowrap;  
+    }      
+    &__item {
+        position: relative;
+    }
+    &__date {
+
+    }
+    &__message {
+
+    }
+    &__photo {
+
+    }
+    &__front {
+        position: absolute;
+    }
+    &__action {
+        position: absolute;
+        padding: 20px 50px;
+        border: 3px solid #fff;
+        a {
+            font: {
+                family: $third_font;
+                size: 1.2em;
+                weight: 400;
+            }
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $secondary_color;
+        }
+    }
+}

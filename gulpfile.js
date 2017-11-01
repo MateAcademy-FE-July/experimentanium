@@ -30,6 +30,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('sass', function () {
+  setTimeout(() => {
  return gulp.src(path.dev.outputSass)
    .pipe(sourcemaps.init())
    .pipe(sass())
@@ -38,6 +39,7 @@ gulp.task('sass', function () {
    .pipe(sourcemaps.write())
    .pipe(gulp.dest(path.dev.outputStyles))
    .pipe(browserSync.reload({stream:true}));
+  }, 500);
 });
 
 gulp.task('browser-sync', function() {
