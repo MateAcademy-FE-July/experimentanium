@@ -17,6 +17,7 @@
         padding-bottom: 35px;
         &:hover {
             color: $color_purple;
+            cursor: pointer;
         }
         &__--left {
             
@@ -62,6 +63,7 @@
     &__photo {
         img {
             max-width: 100%;
+            height: 100%;
         }
         
 
@@ -89,5 +91,8 @@
             text-decoration: none;
             color: $secondary_color;
         }
+    }
+    &__hide {
+        display: none;
     }
 }
