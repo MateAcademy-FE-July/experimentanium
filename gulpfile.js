@@ -30,16 +30,20 @@ gulp.task('html', function () {
 });
 
 gulp.task('sass', function () {
- return gulp.src(path.dev.outputSass)
-   .pipe(sourcemaps.init())
-   .pipe(sass())
-     .on('error', notify.onError())
-   .pipe(autoprefixer(['last 3 versions', '> 5%', 'Firefox ESR', 'ie >= 7']))
-   .pipe(sourcemaps.write())
-   .pipe(gulp.dest(path.dev.outputStyles))
-   .pipe(browserSync.reload({stream:true}));
+  setTimeout(() => {
+    return gulp.src(path.dev.outputSass)
+      .pipe(sourcemaps.init())
+      .pipe(sass())
+      .on('error', notify.onError())
+      .pipe(autoprefixer(['last 3 versions', '> 5%', 'Firefox ESR', 'ie >= 7']))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest(path.dev.outputStyles))
+      .pipe(browserSync.reload({
+        stream: true
+      }));
+  }, 200);
 });
-
+ 
 gulp.task('browser-sync', function() {
  browserSync.init({
    server: {

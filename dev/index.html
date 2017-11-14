@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Blank Template</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,700|Roboto|Roboto+Condensed:400,700" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,700|Roboto|Roboto+Condensed:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,700|Roboto|Roboto+Condensed:400,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
   <div class="body-wrapper">
@@ -22,7 +22,7 @@
     				<li>ukr <i class="fa fa-angle-down" aria-hidden="true"></i></li>
     			</ul>
     		</div>
-    		<header class="header">
+    		<section class="header__main">
     			<div class="header__logo logo">
     				<img class="logo__img" src="../../assets/img/logo.png" alt="logoimg">
     				<span class="logo__text">
@@ -37,7 +37,6 @@
     					<span class="burger__line burger__line--bottom"></span>
     				</div>
     			<nav class="header__nav nav">
-    					
     				<ul class="nav__items menu">
     					<li class="nav__item">
     						<a class="nav__link" href="#">головна</a>
@@ -57,6 +56,9 @@
     					<li class="nav__item">
     						<a class="nav__link" href="#">про нас</a>
     					</li>
+    					<li class="nav__tickets nav__item">
+    						<a href="#">квитки</a>
+    					</li>
     				</ul>
     			</nav>
     			<div class="header__buy">
@@ -64,13 +66,13 @@
     					квитки
     				</button>
     			</div>
-    		</header>
+    		</section>
     	</div>
     </header>
     <section class="section tickets">
-      <div class="tickets__container">
-        <div class="tickets__container--left">
-          <div class="container">
+      <div class="container nopadding">
+        <div class="tickets__container">
+          <div class="tickets__container-left">
             <div class="tickets__title">
               <a href="#" class="tickets__link tickets__link--angle">
                 <i class="fa fa-angle-left icon--angle" aria-hidden="true"></i>
@@ -80,9 +82,7 @@
               <a href="#" class="tickets__link tickets__link--white"> дифузія</a>
             </div>
           </div>
-        </div>
-        <div class="tickets__container--main">
-          <div class="tickets__block">
+          <div class="tickets__container-right">
             <div class="tickets__photo">
               <img src="../../assets/img/tickets-img.png" alt="tickets-img" class="tickets__img">
               <div class="tickets__caption caption">
@@ -100,8 +100,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="tickets__block tickets__block--right">
             <div class="tickets__tabs tabs">
               <ul class="tabs__caption">
                 <li class="tabs__link">Інформація</li>
@@ -109,14 +107,58 @@
                 <li class="tabs__link active">квитки</li>
               </ul>
               <div class="tabs__content">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem molestias soluta nisi impedit ut iste accusantium
-                  ad quod esse omnis!</p>
+                <div class="tabs__info">
+                  <p class="tabs__title">Лекція-експеримент</p>
+                  <p class="tabs__sub">Дифузія. Взаємодія атомів і молекул</p>
+                  <p class="tabs__desc">Дифу́зія (лат. diffusio — поширення, розтікання, розсіювання, взаємодія) — процес взаємного проникнення молекул
+                    або атомів однієї речовини поміж молекул або атомів іншої, що зазвичай приводить до вирівнювання їх концентрацій
+                    у всьому займаному об'ємі.</p>
+                  <p class="tabs__desc">У деяких ситуаціях одна з речовин уже має вирівняну концентрацію, і говорять про дифузію одної речовини в іншій.</p>
+                  <p class="tabs__desc">При цьому зазвичай перенесення речовини відбувається з області з високою концентрацією в область з низькою
+                    концентрацією (вздовж вектора градієнта концентрації).</p>
+                  <p class="tabs__desc">Прикладом дифузії може служити перемішування газів (наприклад, поширення запахів) або рідин (якщо у воду капнути
+                    чорнила, то рідина через деякий час стане рівномірно пофарбованою). Інший приклад пов'язаний з твердим тілом:
+                    атоми дотичних металів перемішуються на кордоні дотику. Важливу роль дифузія частинок грає у фізиці плазми.</p>
+                </div>
               </div>
               <div class="tabs__content">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem molestias soluta nisi impedit ut iste accusantium
-                  ad quod esse omnis!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem molestias soluta nisi impedit ut iste accusantium
-                  ad quod esse omnis!</p>
+                <div class="tabs__comments">
+                  <div class="tabs__comment">
+                    <p class="tabs__client">Марія, м.Київ</p>
+                    <div class="tabs__rank">
+                      <p class="tabs__mark">Оцінка:</p>
+                      <a href="#" class="tabs__star"></a>
+                    </div>
+                    <p class="tabs__text">Класна лекція, прикольний і веселий професор. Все дуже детально розказали, і навіть запросили провести експеримент.
+                      Дуже рада, що купила квиток</p>
+                  </div>
+                  <div class="tabs__comment">
+                    <p class="tabs__client">Марія, м.Київ</p>
+                    <div class="tabs__rank">
+                      <p class="tabs__mark">Оцінка:</p>
+                      <a href="#" class="tabs__star"></a>
+                    </div>
+                    <p class="tabs__text">Я в захваті!!!. Все дуже детально розказали, і навіть запросили провести експеримент. Приїду ще раз</p>
+                  </div>
+                  <div class="tabs__comment">
+                    <p class="tabs__client">Тарас, м.Одеса</p>
+                    <div class="tabs__rank">
+                      <p class="tabs__mark">Оцінка:</p>
+                      <a href="#" class="tabs__star"></a>
+                    </div>
+                    <p class="tabs__text">Класна лекція, прикольний і веселий професор. Все дуже детально розказали, і навіть запросили провести експеримент.
+                      Дуже рада, що купила квиток</p>
+                  </div>
+                  <form action="POST" class="tabs__form">
+                    <p class="tabs__form-title">ВІдвідали лекцію? Залишіть відгук</p>
+                    <div class="tabs__input-group">
+                      <input type="text" placeholder="Ім'я" class="tabs__input">
+                      <input type="text" placeholder="Місто" class="tabs__input">
+                      <textarea name="text" cols="50" rows="3" placeholder="Відгук" class="tabs__input"></textarea>
+                    </div>
+                    <button type="submit" class="tabs__form-btn" type="submit">Додати коментар</button>
+                  </form>
+                </div>
               </div>
               <div class="tabs__content active">
                 <div class="tabs__item">
@@ -184,15 +226,13 @@
     </section>
     <footer class="footer">
         <div class="footer__content">
+            <div class="footer__image">
+                <img src="./assets/img/experimentanium__logo.png" alt="Experimentanium logo">
+            </div>
             <div class="footer__action">
-                <div class="footer__logo">
-                    <div class="footer__image">
-                        <img src="./assets/img/experimentanium__logo.png" alt="Experimentanium logo">
-                    </div>
-                    <h2 class="footer__header">Експериментаніум</br>
-                        <span>музей популярної науки і техніки</span>
-                    </h2>
-                </div>
+                <h2 class="footer__header">Експериментаніум</br>
+                    <span>музей популярної науки і техніки</span>
+                </h2>
                 <div class="footer__subscribe">
                     <h3 class="footer__title">підписатись на новини</h3>
                     <form class="footer__form">
@@ -214,7 +254,7 @@
             </div>
             <div class="footer__c-menu c-menu">
                 <ul class="c-menu__item">
-                    <h3 class="c-menu__title">експозиція та шоу</h3>
+                    <h3 class="c-menu__title"><a href="#">експозиція та шоу</a></h3>
                     <li>
                         <a class="c-menu__link" href="#">Шоу в музеї</a>
                     </li>
@@ -229,7 +269,7 @@
                     </li>
                 </ul>
                 <ul class="c-menu__item">
-                    <h3 class="c-menu__title">новини</h3>
+                    <h3 class="c-menu__title"><a href="#">новини</a></h3>
                     <li>
                         <a class="c-menu__link" href="#">Новини музею</a>
                     </li>
@@ -244,7 +284,7 @@
                     </li>
                 </ul>
                 <ul class="c-menu__item">
-                    <h3 class="c-menu__title">освітні програми</h3>
+                    <h3 class="c-menu__title"><a href="#">освітні програми</a></h3>
                     <li>
                         <a class="c-menu__link" href="#">Шкільні екскурсії</a>
                     </li>
@@ -259,7 +299,7 @@
                     </li>
                 </ul>
                 <ul class="c-menu__item">
-                    <h3 class="c-menu__title">оргранізація заходів</h3>
+                    <h3 class="c-menu__title"><a href="#">оргранізація заходів</a></h3>
                     <li>
                         <a class="c-menu__link" href="#">День народження</a>
                     </li>
@@ -274,7 +314,7 @@
                     </li>
                 </ul>
                 <ul class="c-menu__item">
-                    <h3 class="c-menu__title">про нас</h3>
+                    <h3 class="c-menu__title"><a href="#">про нас</a></h3>
                     <li>
                         <a class="c-menu__link" href="#">Про музей</a>
                     </li>
@@ -292,7 +332,7 @@
                     </li>
                 </ul>
                 <ul class="c-menu__item">
-                    <h3 class="c-menu__title">музей</h3>
+                    <h3 class="c-menu__title"><a href="#">музей</a></h3>
                     <li>
                         <a class="c-menu__link" href="#">Квитки</a>
                     </li>

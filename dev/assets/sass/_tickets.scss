@@ -1,16 +1,16 @@
 .tickets {
   &__container {
-    position: relative;
-    &--left {
-      width: 470px;
-      height: 864px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 870px;
+    &-left {
+      width: 34%;
       background: $color_purple;
+      position: relative;
     }
-    &--main {
-      position: absolute;
-      top: 95px;
-      left: 170px;
+    &-right {
       display: flex;
+      position: relative;
     }
   }
   &__title {
@@ -32,13 +32,11 @@
     }
   }
   &__photo {
+    position: absolute;
+    top: 95px;
+    transform: translate(-100%, 0);
     display: flex;
     flex-direction: column;
-  }
-  &__block {
-    &--right {
-      margin-right: 40px;
-    }
   }
 }
 
@@ -68,28 +66,29 @@
 }
 
 .tabs {
-  max-width: 700px;
-  width: 100%;
+  width: 600px;
+  margin-top: 140px;
+  margin-right: 20px;
   &__caption {
     display: flex;
     text-transform: uppercase;
     color: #c6c6c6;
     font-family: $logo_font;
     font-size: 18px;
-    margin-top: 50px;
-    margin-left: 56px;
     .active {
       color: $color_purple;
       font-weight: 600;
     }
   }
-
   &__link {
+    margin-right: 20px;
+    &:first-child {
+      padding-left: 82px;
+    }
     &:not(.active) {
       cursor: pointer;
     }
   }
-
   &__content {
     display: none;
     &.active {
@@ -98,38 +97,101 @@
       padding: 40px 0;
     }
   }
+  &__info,
+  &__comments,
+  &__item {
+    padding: 10px 82px;
+  }
+  &__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 2.5;
+    margin-bottom: 0;
+  }
+  &__sub {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  &__desc {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  &__comment {
+    padding-bottom: 15px;
+  }
 
+  &__client {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    width: 50%;
+  }
+  &__rank {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  &__text {
+    font-size: 14px;
+    color: #8a8a8a;
+  }
+  &__form {
+    &-title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &-btn {
+      height: 50px;
+      padding: 0 25px;
+      text-transform: uppercase;
+      font-family: $logo_font;
+      font-size: 14px;
+      font-weight: 600;
+      color: #060606;
+      background: #ffffff;
+      border: 1px solid #060606;
+      cursor: pointer;
+    }
+  }
+  &__input {
+    font-family: $primary_font;
+    font-size: 14px;
+    font-style: italic;
+    color: #9b9b9b;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 10px 0 10px 10px;
+    box-sizing: border-box;
+    & ::-webkit-input-placeholder {
+      color: #9b9b9b;
+    }
+  }
   &__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 80px;
     &:hover {
-      background: $color_purple;
+      background-color: $color_purple;
+      color: #ffffff;
       cursor: pointer;
     }
     &:hover .btn {
       visibility: visible;
-      &:hover {
-        background: rgb(49, 131, 185);
-        color: rgb(36, 8, 8);
-        cursor: pointer;
-        }
     }
   }
-
   &__name {
     font-size: 16px;
     width: 40%;
   }
-
   &__price {
     font-size: 20px;
     font-weight: 600;
     font-family: $logo_font;
     width: 30%;
   }
-  
   &__btn {
     visibility: hidden;
     font-size: 14px;
@@ -141,38 +203,53 @@
     text-transform: uppercase;
     padding: 0 40px;
     height: 50px;
+    &:hover {
+      background: #ffffff;
+      color: $color_purple;
+      cursor: pointer;
+    }
   }
-  
   &:hover {
     background: #fff;
     cursor: pointer;
   }
 }
 
-@include respond-to(xl) {
+@media (max-width: 1199px) {
+  .tickets {
+    &__photo {
+      width: 80%;
+    }
+  }
   .tabs {
-    width: 400px;
+    width: 500px;
     &__caption {
       margin: 0;
     }
     &__content.active {
       padding-top: 20px;
     }
-    &__item {
+    &__link:first-child {
+      padding-left: 20px;
+    }
+     &__info,
+     &__comments,
+     &__item
+     {
       padding: 5px 20px;
     }
-  }  
+  }
 }
 
-@include respond-to(lg) {
+@media (max-width: 991px) {
   .tickets {
+    padding-top: 100px;
     &__container {
-      &--left {
+      flex-direction: column;
+      &-left {
         width: auto;
-        height: auto;
       }
-      &--main {
-        position: static;
+      &-right {
         flex-direction: column;
       }
     }
@@ -180,11 +257,14 @@
       padding-bottom: 20px;
     }
     &__img {
-      height: 400px;
-      width: 50%;      
+      width: 50%;
     }
     &__photo {
+      position: static;
+      transform: none;
       flex-direction: row;
+      height: 400px;
+      width: 100%;
     }
     &__caption {
       flex-direction: column;
@@ -195,26 +275,56 @@
     width: 100%;
   }
   .tabs {
-    width: auto;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     &__caption {
       margin-top: 20px;
+      justify-content: center;
+    }
+    &__content {
+      width: auto;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-btn {
+        width: 400px;
+      }
+    }
+    &__input-group {
+      display: flex;
+      flex-direction: column;
+    }
+    &__input {
+      width: 400px;
+      margin-right: 0;
     }
     &__btn {
       visibility: visible;
+      &:hover {
+        color: #ffffff;
+        background: $color_purple;
+        border: 2px solid #ffffff;
+      }
     }
     &__item {
       &:hover {
         background: #ffffff;
+        color: #000000;
       }
     }
   }
 }
 
-@include respond-to(sm) {
+@media (max-width: 575px) {
   .tabs {
     &__caption {
       font-size: 16px;
+      flex-wrap: wrap;
+    }
+    &__link {
+      margin-right: 0;
     }
     &__name {
       font-size: 14px;
@@ -227,7 +337,15 @@
       height: 30px;
       padding: 0 20px;
     }
+    &__form {
+      align-items: initial;
+      &-btn {
+        width: 100%;
+      }
+    }
+    &__input {
+      width: 100%;
+    }
   }
 }
-
 
