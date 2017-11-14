@@ -1,7 +1,7 @@
 <section class="section tickets">
-  <div class="tickets__container">
-    <div class="tickets__container--left">
-      <div class="container">
+  <div class="container nopadding">
+    <div class="tickets__container">
+      <div class="tickets__container-left">
         <div class="tickets__title">
           <a href="#" class="tickets__link tickets__link--angle">
             <i class="fa fa-angle-left icon--angle" aria-hidden="true"></i>
@@ -11,9 +11,7 @@
           <a href="#" class="tickets__link tickets__link--white"> дифузія</a>
         </div>
       </div>
-    </div>
-    <div class="tickets__container--main">
-      <div class="tickets__block">
+      <div class="tickets__container-right">
         <div class="tickets__photo">
           <img src="../../assets/img/tickets-img.png" alt="tickets-img" class="tickets__img">
           <div class="tickets__caption caption">
@@ -31,8 +29,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="tickets__block tickets__block--right">
         <div class="tickets__tabs tabs">
           <ul class="tabs__caption">
             <li class="tabs__link">Інформація</li>
@@ -40,14 +36,58 @@
             <li class="tabs__link active">квитки</li>
           </ul>
           <div class="tabs__content">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem molestias soluta nisi impedit ut iste accusantium
-              ad quod esse omnis!</p>
+            <div class="tabs__info">
+              <p class="tabs__title">Лекція-експеримент</p>
+              <p class="tabs__sub">Дифузія. Взаємодія атомів і молекул</p>
+              <p class="tabs__desc">Дифу́зія (лат. diffusio — поширення, розтікання, розсіювання, взаємодія) — процес взаємного проникнення молекул
+                або атомів однієї речовини поміж молекул або атомів іншої, що зазвичай приводить до вирівнювання їх концентрацій
+                у всьому займаному об'ємі.</p>
+              <p class="tabs__desc">У деяких ситуаціях одна з речовин уже має вирівняну концентрацію, і говорять про дифузію одної речовини в іншій.</p>
+              <p class="tabs__desc">При цьому зазвичай перенесення речовини відбувається з області з високою концентрацією в область з низькою
+                концентрацією (вздовж вектора градієнта концентрації).</p>
+              <p class="tabs__desc">Прикладом дифузії може служити перемішування газів (наприклад, поширення запахів) або рідин (якщо у воду капнути
+                чорнила, то рідина через деякий час стане рівномірно пофарбованою). Інший приклад пов'язаний з твердим тілом:
+                атоми дотичних металів перемішуються на кордоні дотику. Важливу роль дифузія частинок грає у фізиці плазми.</p>
+            </div>
           </div>
           <div class="tabs__content">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem molestias soluta nisi impedit ut iste accusantium
-              ad quod esse omnis!</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem molestias soluta nisi impedit ut iste accusantium
-              ad quod esse omnis!</p>
+            <div class="tabs__comments">
+              <div class="tabs__comment">
+                <p class="tabs__client">Марія, м.Київ</p>
+                <div class="tabs__rank">
+                  <p class="tabs__mark">Оцінка:</p>
+                  <a href="#" class="tabs__star"></a>
+                </div>
+                <p class="tabs__text">Класна лекція, прикольний і веселий професор. Все дуже детально розказали, і навіть запросили провести експеримент.
+                  Дуже рада, що купила квиток</p>
+              </div>
+              <div class="tabs__comment">
+                <p class="tabs__client">Марія, м.Київ</p>
+                <div class="tabs__rank">
+                  <p class="tabs__mark">Оцінка:</p>
+                  <a href="#" class="tabs__star"></a>
+                </div>
+                <p class="tabs__text">Я в захваті!!!. Все дуже детально розказали, і навіть запросили провести експеримент. Приїду ще раз</p>
+              </div>
+              <div class="tabs__comment">
+                <p class="tabs__client">Тарас, м.Одеса</p>
+                <div class="tabs__rank">
+                  <p class="tabs__mark">Оцінка:</p>
+                  <a href="#" class="tabs__star"></a>
+                </div>
+                <p class="tabs__text">Класна лекція, прикольний і веселий професор. Все дуже детально розказали, і навіть запросили провести експеримент.
+                  Дуже рада, що купила квиток</p>
+              </div>
+              <form action="POST" class="tabs__form">
+                <p class="tabs__form-title">ВІдвідали лекцію? Залишіть відгук</p>
+                <div class="tabs__input-group">
+                  <input type="text" placeholder="Ім'я" class="tabs__input">
+                  <input type="text" placeholder="Місто" class="tabs__input">
+                  <textarea name="text" cols="50" rows="3" placeholder="Відгук" class="tabs__input"></textarea>
+                </div>
+                <button type="submit" class="tabs__form-btn" type="submit">Додати коментар</button>
+              </form>
+            </div>
           </div>
           <div class="tabs__content active">
             <div class="tabs__item">
