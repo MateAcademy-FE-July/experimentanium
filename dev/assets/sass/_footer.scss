@@ -1,6 +1,10 @@
 .footer {
     max-width: 100%;
     background-color: $color_purple;
+    margin: 0 auto;
+    @media (min-width: 1200px) {
+        width: 1366px;
+    }
     &__content {
         max-width: 1300px;
         margin: 0 auto;
