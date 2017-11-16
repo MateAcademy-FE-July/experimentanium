@@ -35,8 +35,12 @@ $socials: (
         rss: #12699b
 );
 
-$on: gold;
-$on2: linear-gradient(to left, greenyellow, orange, crimson);
-$off: #c0c0c0;
-$fill: true;
-$tilt: false;
+// Breakpoints 
+        $sm_min:576px;
+        $sm_max:577px;
+        $md_min:768px;
+        $md_max:769px;
+        $lg_min:992px;
+        $lg_max:993px;
+        $xlg_min:1200px;
+        $xlg_max:1201px;
