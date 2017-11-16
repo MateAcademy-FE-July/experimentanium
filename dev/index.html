@@ -197,8 +197,8 @@
         </div>
       </div>
     </section>
-    <section class="info">
-        <div class="info__location">
+    <section class="info container nopadding">
+        <div class="info__location location">
             <div class="location__address address">
                 <p class="address__header nomargin">Чекаємо вас за адресою:</p>
                 <p class="address__destination nomargin">м. Київ, вул. Верхній Вал 2А</p>
@@ -217,36 +217,37 @@
                     <a href="tel:+380992567127" class="phone-numbers__1" tel:="">+38 (099) 256-71-27</a>
                 </div>
                 <a href="mailto:enjoy@experimentanium.com.ua" class="contacts__email">enjoy@experimentanium.com.ua</a>
+                <a href="mailto:enjoy@experimentanium.com.ua" class="contacts__email-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+    
             </div>
         </div>
         <div id="map"></div>
-        <script>
-          function initMap() {
-            var uluru = {lat: 50.437929, lng: 30.5064236};
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 16,
-              center: uluru
-            });
-            var marker = new google.maps.Marker({
-              position: uluru,
-              map: map
-            });
-          }
-        </script>
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUd2B0XXvRSxet4Bd9EmYFkuIWiAqmic&callback=initMap">
-        </script>
         <div class="info__form from">
             <form action="" class="form__visit-inf visit-inf">
                 <p class="visit-inf__header nomargin">Запланувати візит</p>
-                <input type="text" class="visit-inf__date" placeholder="Enter the date 01/01/2000">
+                <input type="text" id="datepicker"  class="visit-inf__date" placeholder="Вкажiть дату">
                 <div class="visit-inf__time-quantity">
-                    <input type="text" class="visit-inf__time" placeholder="Enter the time">
+                    <input type="text" class="visit-inf__time" placeholder="Вкажiть час">
                     <input type="text" class="visit-inf__quantity" placeholder="Кількість квитків">
                 </div>
                 <button class="visit-inf__reserve" type="submit">забронювати</button>            
             </form>
         </div>
+            <script>
+                function initMap() {
+                    var uluru = { lat: 50.437929, lng: 30.5064236 };
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 14,
+                        center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map
+                    });
+                }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUd2B0XXvRSxet4Bd9EmYFkuIWiAqmic&callback=initMap">
+            </script>
     </section>
     <footer class="footer">
         <div class="footer__content">

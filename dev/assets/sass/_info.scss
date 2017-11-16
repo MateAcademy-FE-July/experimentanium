@@ -4,65 +4,67 @@
 
 a {
     text-decoration: none;
+    color: $secondary_color;
 }
 
 .info {
     display: flex;
     justify-content: space-between;
-    font: {
-        family: $primary_font;
-        size: 1.8rem;
-        weight: 600;
-    }
     color: $secondary_color;
     &__location{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 48.9rem;
+        width: 23%;
         background-color: $color_purple;
-        padding: 4rem 5rem 0;
+        padding: 4.2rem 5.6rem 0 7.2rem;
         text-align: center;     
     }
     &__form {
         width: 35%;
-        padding: 4rem;
+        padding: 7.3rem 7.1rem 6.5rem 6.5rem;
         background-color: $orange_color;
-        
+        font-family: $logo_font;
     }
 } 
 .location {
-    &__address{
-        margin-bottom: 3rem;
-    }
-    &__open-time{
-        @extend .location__address;
+    line-height: 2.3rem;
+    font: {
+        family: $primary_font;
+        size: 1.2rem;
+        weight: 400;
     }
 }
 
 .address{
+    &__header {
+        margin-bottom: 1.2rem;
+    }
     &__destination {
         text-transform: uppercase;
+        font-weight: 600;
     }
 }
 
 .open-time {
+    line-height: 2rem;
+    text-transform: uppercase;
     &__header {
-        margin-bottom: 2rem;        
-    }
-    &__first-day{
-        text-transform: uppercase;
+        margin-bottom: 1.2rem;   
+        line-height: 2.3rem;
+        text-transform: none;
     }
 }
 
 .contacts{
     &__header {
-        margin-bottom: 2rem; 
+        margin-bottom: 1.2rem; 
     }
     &__phone-numbers {
         display: flex;
         flex-direction: column;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+        line-height: 1.8rem;
     }
 }
 
@@ -79,7 +81,6 @@ a {
     &__header{
         text-transform: uppercase;
         font: {
-            family: $primary_font;
             size: 1.8rem;
             weight: 600;
         }
@@ -100,41 +101,43 @@ a {
         @extend .visit-inf__time;
     }
     &__reserve {
-        width: 50%;
-        padding: 2rem;
+        display: block;
+        width: 47%;
+        padding: 1.6rem 2rem;
         background-color: $orange_color;
         border: 0.1rem solid $bgcolor;
         color: $bgcolor;
         font: {
-            size: 1.8rem;
+            size: 1.4rem;
             weight: 600;
         }
         text-transform: uppercase;
+        cursor: pointer;
     }
+}
+
+.contacts__email-icon {
+    font-size: 0rem;
 }
 
 
 #map {
-    width: 40%;
+    width: 42%;
     height: 51rem;
 }
 
-@media (max-width:$xlg_min) {
+@media (max-width:$xlg_max) {
     .info {
         &__location{
-            padding: 3rem 1rem;
+            padding: 2rem 3rem 0 4rem;
         }
         &__form {
-            padding: 3rem 1rem; 
+            padding: 5rem 5rem 4rem 4rem; 
         }
-    }
-    #map {
-        width: 40%;
-        height: 55rem;
-    }    
+    } 
 }
 
-@media (max-width:$lg_min) {
+@media (max-width:$lg_max) {
     .info {
         display: flex;
         flex-wrap: wrap;
@@ -143,13 +146,41 @@ a {
             order: 3;
         }
         &__form {
-            padding: 10rem;
+            padding: 7rem;
             width: 100%;
             order: 1;
         }
     }
 
+    .visit-inf {
+        text-align: center;
+        &__header {
+            margin-bottom: 4rem;
+            font-size: 3rem;
+        }
+
+        &__date {
+            margin-bottom: 4rem;
+        }
+
+        &__time{
+            width: 50%;
+            margin-right: 1rem;
+        }
+
+        &__quantity{
+            margin-right: 0;
+        }
+
+        &__reserve {
+            align-self: center;
+            width: 40%;
+        }
+    }
+
     .location {
+        font-size: 1.7rem;
+        line-height: 3rem;
         &__address{
             margin-bottom: 1rem;
         }
@@ -157,7 +188,79 @@ a {
 
     #map {
         width: 50%;
-        height: 55rem;
+        height: 40rem;
         order: 2;
     } 
+}
+    
+@media (max-width:$md_max) {
+    .info{
+        &__form {
+            padding: 3rem 4rem;
+        }
+    }
+    .visit-inf {
+        &__header {
+            margin-bottom: 2rem;
+        }
+        &__date {
+            margin-bottom: 2rem;
+        }
+        &__reserve{
+            width: 30%;
+        }
+    }
+
+    .location {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        &__address {
+            margin-bottom: 1rem;
+        }
+    }
+
+     #map {
+         height: 39rem;
+     }
+}
+
+@media (max-width:$sm_max) {
+    .info {
+        &__form{
+        padding: 2.5rem 1rem;
+        }
+    }
+    
+    .visit-inf {
+        &__header {
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        &__date {
+            margin-bottom: 3rem;
+        }
+
+        &__reserve {
+            width: 65%;
+        }
+    }
+
+    .location {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding: 1.5rem 1rem 0;
+        &__address {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .contacts__email {
+        display: none;
+    }
+
+    .contacts__email-icon {
+        font-size: 3rem;
+    }
+
 }
