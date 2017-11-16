@@ -197,32 +197,57 @@
         </div>
       </div>
     </section>
-    <section class="info">
-        <div class="info__location">
+    <section class="info container nopadding">
+        <div class="info__location location">
             <div class="location__address address">
-                <p class="address__header">Чекаємо вас за адресою:</p>
-                <p class="address__destination">м. Київ, вул. Верхній Вал 2А</p>
+                <p class="address__header nomargin">Чекаємо вас за адресою:</p>
+                <p class="address__destination nomargin">м. Київ, вул. Верхній Вал 2А</p>
             </div>
             <div class="location__open-time open-time">
-                <p class="open-time__header">Графік роботи музею:</p>
-                <p class="open-time__first-day">пн-вихідний</p>
-                <p class="open-time__work-days">вт-пт: 09:30 - 19:00</p>
-                <p class="open-time__last-day">сб-нд, свята: 10:00 - 20:00</p>
+                <p class="open-time__header nomargin">Графік роботи музею:</p>
+                <p class="open-time__first-day nomargin">пн-вихідний</p>
+                <p class="open-time__work-days nomargin">вт-пт: 09:30 - 19:00</p>
+                <p class="open-time__last-day nomargin">сб-нд, свята: 10:00 - 20:00</p>
+            </div>
+            <div class="location__contacts contacts">
+                <p class="contacts__header nomargin">Контакти</p>
+                <div class="contacts__phone-numbers phone-numbers">
+                    <a href="tel:+380444256581" class="phone-numbers__1" tel:="">+38 (044) 425-65-81,</a>
+                    <a href="tel:+380964779791" class="phone-numbers__1" tel:="">+38 (096) 477-97-91,</a>
+                    <a href="tel:+380992567127" class="phone-numbers__1" tel:="">+38 (099) 256-71-27</a>
+                </div>
+                <a href="mailto:enjoy@experimentanium.com.ua" class="contacts__email">enjoy@experimentanium.com.ua</a>
+                <a href="mailto:enjoy@experimentanium.com.ua" class="contacts__email-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+    
             </div>
         </div>
-        <div class="info__map">
-        </div>   
+        <div id="map"></div>
         <div class="info__form from">
             <form action="" class="form__visit-inf visit-inf">
-                <p class="visit-inf__header">Запланувати візит</p>
-                <input type="text" class="visit-inf__date" placeholder="Enter the date 01/01/2000">
+                <p class="visit-inf__header nomargin">Запланувати візит</p>
+                <input type="text" id="datepicker"  class="visit-inf__date" placeholder="Вкажiть дату">
                 <div class="visit-inf__time-quantity">
-                    <input type="text" class="visit-inf__time" placeholder="Enter the time">
-                    <input type="text" class="visit-inf__quantity" placeholder="Enter the quantity">
+                    <input type="text" class="visit-inf__time" placeholder="Вкажiть час">
+                    <input type="text" class="visit-inf__quantity" placeholder="Кількість квитків">
                 </div>
                 <button class="visit-inf__reserve" type="submit">забронювати</button>            
             </form>
         </div>
+            <script>
+                function initMap() {
+                    var uluru = { lat: 50.437929, lng: 30.5064236 };
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 14,
+                        center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map
+                    });
+                }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUd2B0XXvRSxet4Bd9EmYFkuIWiAqmic&callback=initMap">
+            </script>
     </section>
     <footer class="footer">
         <div class="footer__content">

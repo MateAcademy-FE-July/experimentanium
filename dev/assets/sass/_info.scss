@@ -1,13 +1,266 @@
+.nomargin {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $secondary_color;
+}
+
 .info {
     display: flex;
     justify-content: space-between;
-    padding: 7rem;
+    color: $secondary_color;
+    &__location{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 23%;
+        background-color: $color_purple;
+        padding: 4.2rem 5.6rem 0 7.2rem;
+        text-align: center;     
+    }
+    &__form {
+        width: 35%;
+        padding: 7.3rem 7.1rem 6.5rem 6.5rem;
+        background-color: $orange_color;
+        font-family: $logo_font;
+    }
 } 
 .location {
-    width: 20%;
-    &__address{
-        
-        background-color: $color_purple;
-        
+    line-height: 2.3rem;
+    font: {
+        family: $primary_font;
+        size: 1.2rem;
+        weight: 400;
     }
+}
+
+.address{
+    &__header {
+        margin-bottom: 1.2rem;
+    }
+    &__destination {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+.open-time {
+    line-height: 2rem;
+    text-transform: uppercase;
+    &__header {
+        margin-bottom: 1.2rem;   
+        line-height: 2.3rem;
+        text-transform: none;
+    }
+}
+
+.contacts{
+    &__header {
+        margin-bottom: 1.2rem; 
+    }
+    &__phone-numbers {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        line-height: 1.8rem;
+    }
+}
+
+.form {
+    &__visit-inf {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.visit-inf {
+    &__header{
+        text-transform: uppercase;
+        font: {
+            size: 1.8rem;
+            weight: 600;
+        }
+    }
+    &__date {
+        padding: 2rem;
+        border: 0.1rem solid #b8b8b8;
+    }
+    &__time-quantity {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__time {
+        width: 35%;
+        @extend .visit-inf__date;
+    }
+    &__quantity {
+        @extend .visit-inf__time;
+    }
+    &__reserve {
+        display: block;
+        width: 47%;
+        padding: 1.6rem 2rem;
+        background-color: $orange_color;
+        border: 0.1rem solid $bgcolor;
+        color: $bgcolor;
+        font: {
+            size: 1.4rem;
+            weight: 600;
+        }
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+.contacts__email-icon {
+    font-size: 0rem;
+}
+
+
+#map {
+    width: 42%;
+    height: 51rem;
+}
+
+@media (max-width:$xlg_max) {
+    .info {
+        &__location{
+            padding: 2rem 3rem 0 4rem;
+        }
+        &__form {
+            padding: 5rem 5rem 4rem 4rem; 
+        }
+    } 
+}
+
+@media (max-width:$lg_max) {
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        &__location {
+            width: 50%;
+            order: 3;
+        }
+        &__form {
+            padding: 7rem;
+            width: 100%;
+            order: 1;
+        }
+    }
+
+    .visit-inf {
+        text-align: center;
+        &__header {
+            margin-bottom: 4rem;
+            font-size: 3rem;
+        }
+
+        &__date {
+            margin-bottom: 4rem;
+        }
+
+        &__time{
+            width: 50%;
+            margin-right: 1rem;
+        }
+
+        &__quantity{
+            margin-right: 0;
+        }
+
+        &__reserve {
+            align-self: center;
+            width: 40%;
+        }
+    }
+
+    .location {
+        font-size: 1.7rem;
+        line-height: 3rem;
+        &__address{
+            margin-bottom: 1rem;
+        }
+    }
+
+    #map {
+        width: 50%;
+        height: 40rem;
+        order: 2;
+    } 
+}
+    
+@media (max-width:$md_max) {
+    .info{
+        &__form {
+            padding: 3rem 4rem;
+        }
+    }
+    .visit-inf {
+        &__header {
+            margin-bottom: 2rem;
+        }
+        &__date {
+            margin-bottom: 2rem;
+        }
+        &__reserve{
+            width: 30%;
+        }
+    }
+
+    .location {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        &__address {
+            margin-bottom: 1rem;
+        }
+    }
+
+     #map {
+         height: 39rem;
+     }
+}
+
+@media (max-width:$sm_max) {
+    .info {
+        &__form{
+        padding: 2.5rem 1rem;
+        }
+    }
+    
+    .visit-inf {
+        &__header {
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        &__date {
+            margin-bottom: 3rem;
+        }
+
+        &__reserve {
+            width: 65%;
+        }
+    }
+
+    .location {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding: 1.5rem 1rem 0;
+        &__address {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .contacts__email {
+        display: none;
+    }
+
+    .contacts__email-icon {
+        font-size: 3rem;
+    }
+
 }
