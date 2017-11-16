@@ -157,7 +157,7 @@
 
 .c-menu {
     &__item {
-        //width: 25%;
+        width: 25%;
         padding: 0 25px 35px 25px;
         li {
             padding-left: 0;
@@ -165,6 +165,7 @@
         }
         @media (max-width:768px) {
             text-align: center;
+            width: auto;
         }
     }
     &__link {
