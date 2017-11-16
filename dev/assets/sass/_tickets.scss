@@ -5,7 +5,7 @@
     min-height: 870px;
     &-left {
       width: 34%;
-      background: $color_purple;
+      background-color: $color_purple;
       position: relative;
     }
     &-right {
@@ -48,7 +48,7 @@
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
-  background: #7b3fb3;
+  background-color: #7b3fb3;
   width: 100%;
   color: #ffffff;
   &__col {
@@ -151,7 +151,7 @@
       font-size: 14px;
       font-weight: 600;
       color: #060606;
-      background: #ffffff;
+      background-color: #ffffff;
       border: 1px solid #060606;
       cursor: pointer;
     }
@@ -198,19 +198,19 @@
     font-family: $logo_font;
     font-weight: 600;
     color: #ffffff;
-    background: $color_purple;
+    background-color: $color_purple;
     border: 2px solid #ffffff;
     text-transform: uppercase;
     padding: 0 40px;
     height: 50px;
     &:hover {
-      background: #ffffff;
+      background-color: #ffffff;
       color: $color_purple;
       cursor: pointer;
     }
   }
   &:hover {
-    background: #fff;
+    background-color: #fff;
     cursor: pointer;
   }
 }
@@ -304,13 +304,13 @@
       visibility: visible;
       &:hover {
         color: #ffffff;
-        background: $color_purple;
+        background-color: $color_purple;
         border: 2px solid #ffffff;
       }
     }
     &__item {
       &:hover {
-        background: #ffffff;
+        background-color: #ffffff;
         color: #000000;
       }
     }
@@ -349,3 +349,58 @@
   }
 }
 
+
+.stars {
+  height: 4rem;
+  width: 20rem;
+  background: $on;
+    &:hover {
+      background: $on;
+    }
+
+  &:hover .star {
+    background-color: transparent;
+  }
+  .star {
+    @if $tilt {
+      background-image: url('https://s.cdpn.io/2361/whitestarbigtilt.png');
+    }
+    @else {
+      background-image: url('https://s.cdpn.io/2361/whitestarbig.png');
+    }
+    height: 100%;
+    width: 4rem;
+    float: left;
+    cursor: pointer;
+    &.half {
+      @if $tilt {
+        width: 1.7em;
+      }
+      @else {
+        width: 2rem;
+      }
+      &:nth-child(2n) {
+        background-position: right;
+        @if $tilt {
+          width: 2.3rem;
+        }
+      }
+    }
+  }
+}
+
+.pick~.star,
+.star:hover~.star {
+  background-color: $off;
+}
+
+.stars {
+  // margin: -6rem -10rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.tabs__rank {
+  position: relative;
+}
