@@ -8,7 +8,7 @@
     &__content {
         max-width: 1300px;
         margin: 0 auto;
-        padding: 8vh 15px 0 15px;
+        padding: 8vh 8% 0 8%;
         display: flex;
         flex-flow: row nowrap;
         align-items: flex-start;
@@ -138,16 +138,28 @@
         padding: 0;
         border: none;
         border-bottom: 1px solid $bgcolor;
-        background-image: url("../img/paper__plane__button.png");
+        //background-image: url("../img/paper__plane__button.png");
         background-repeat: no-repeat;
         background-color: $color_purple;
         cursor: pointer;
+        color: $secondary_color;
     }
     &__s-link {
         display: inline-block;
-        margin-right: 15px;
+        margin-right: 35px;
         text-decoration: none;
         color: $secondary_color;
+        font-size: 2.5rem;
+        transform: translateZ(0);
+        //transition-property: color, transform;
+        //transition-duration: 1s, 1s;
+        //transition-delay: 0.3s, 0.5s;
+        //transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: color 0.2s ease-in 0.1s, transform 0.1s ease-in-out 0.1s;
+        &:hover {
+            color: #d27a12;
+            transform: scale(1.1);
+        }
     }
     &__social {
         @media (max-width: 991px) {
