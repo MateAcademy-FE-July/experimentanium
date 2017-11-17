@@ -13,7 +13,7 @@
         justify-content: space-between;
         width: 23%;
         background-color: $color_purple;
-        padding: 4.2rem 5.6rem 0 7.2rem;
+        padding: 4.2rem 7.2rem 0 5.4rem;
         text-align: center;     
     }
     &__form {
@@ -84,6 +84,22 @@
     &__date {
         padding: 2rem;
         border: 0.1rem solid #b8b8b8;
+        &::-moz-placeholder {
+            font: {
+                family: $primary_font;
+                size: 1.4rem;
+                weight: 300;
+                style: italic;
+            }
+        }
+        &::-webkit-input-placeholder {
+            font: {
+                family: $primary_font;
+                size: 1.4rem;
+                weight: 300;
+                style: italic;
+            }
+        }
     }
     &__time-quantity {
         display: flex;
