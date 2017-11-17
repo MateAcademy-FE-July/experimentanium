@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
-  $('.stars').on('click', '.star', function () {
-    $(this).siblings('.pick').removeClass('pick');
-    $(this).addClass('pick');
+  $('.star.rating').click(function () {
+    $(this).parent().attr('data-stars', $(this).data('rating'));
   });
   
 });

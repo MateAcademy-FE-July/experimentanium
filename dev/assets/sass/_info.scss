@@ -1,8 +1,4 @@
-.nomargin {
-    margin: 0;
-}
-
-a {
+.phone-numbers__1 {
     text-decoration: none;
     color: $secondary_color;
 }
@@ -126,7 +122,7 @@ a {
     height: 51rem;
 }
 
-@media (max-width:$xlg_max) {
+@media (max-width:$xlg_min) {
     .info {
         &__location{
             padding: 2rem 3rem 0 4rem;
@@ -137,7 +133,7 @@ a {
     } 
 }
 
-@media (max-width:$lg_max) {
+@media (max-width:$lg_min) {
     .info {
         display: flex;
         flex-wrap: wrap;
@@ -193,7 +189,7 @@ a {
     } 
 }
     
-@media (max-width:$md_max) {
+@media (max-width:$md_min) {
     .info{
         &__form {
             padding: 3rem 4rem;
@@ -224,7 +220,7 @@ a {
      }
 }
 
-@media (max-width:$sm_max) {
+@media (max-width:$sm_min) {
     .info {
         &__form{
         padding: 2.5rem 1rem;
