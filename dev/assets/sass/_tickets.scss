@@ -5,7 +5,7 @@
     min-height: 870px;
     &-left {
       width: 34%;
-      background: $color_purple;
+      background-color: $color_purple;
       position: relative;
     }
     &-right {
@@ -38,6 +38,10 @@
     display: flex;
     flex-direction: column;
   }
+  &__img {
+    -webkit-filter: drop-shadow(0 0 15px rgba(100, 0, 0, 0.3));
+    filter: drop-shadow(0 0 15px rgba(100, 0, 0, 0.3));
+  }
 }
 
 .icon--angle {
@@ -48,7 +52,7 @@
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
-  background: #7b3fb3;
+  background-color: #7b3fb3;
   width: 100%;
   color: #ffffff;
   &__col {
@@ -68,7 +72,7 @@
 .tabs {
   width: 600px;
   margin-top: 140px;
-  margin-right: 20px;
+  margin-right: 53px;
   &__caption {
     display: flex;
     text-transform: uppercase;
@@ -81,9 +85,10 @@
     }
   }
   &__link {
-    margin-right: 20px;
+    margin: 0 20px;
+    padding-left: 0;
     &:first-child {
-      padding-left: 82px;
+      margin-left: 82px;
     }
     &:not(.active) {
       cursor: pointer;
@@ -99,8 +104,9 @@
   }
   &__info,
   &__comments,
-  &__item {
-    padding: 10px 82px;
+  &__item,
+  &__form {
+    padding: 10px 20px 10px 82px;
   }
   &__title {
     font-size: 14px;
@@ -116,18 +122,26 @@
     margin-bottom: 40px;
   }
   &__desc {
+    font-weight: 400;
     font-size: 14px;
     margin-bottom: 0;
+    padding-right: 100px;
+  }
+  &__comments {
+    height: 400px;
+    overflow-y: auto;
   }
   &__comment {
     padding-bottom: 15px;
   }
-
   &__client {
     display: inline-block;
     font-size: 14px;
     font-weight: 600;
     width: 50%;
+  }
+  &__mark {
+    display: inline;
   }
   &__rank {
     display: inline-block;
@@ -136,6 +150,7 @@
   }
   &__text {
     font-size: 14px;
+    font-weight: 400;
     color: #8a8a8a;
   }
   &__form {
@@ -151,7 +166,7 @@
       font-size: 14px;
       font-weight: 600;
       color: #060606;
-      background: #ffffff;
+      background-color: #ffffff;
       border: 1px solid #060606;
       cursor: pointer;
     }
@@ -173,6 +188,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    & p {
+      margin: 0;
+    }
     &:hover {
       background-color: $color_purple;
       color: #ffffff;
@@ -183,6 +201,7 @@
     }
   }
   &__name {
+    font-weight: 400;
     font-size: 16px;
     width: 40%;
   }
@@ -198,22 +217,96 @@
     font-family: $logo_font;
     font-weight: 600;
     color: #ffffff;
-    background: $color_purple;
+    background-color: $color_purple;
     border: 2px solid #ffffff;
     text-transform: uppercase;
     padding: 0 40px;
     height: 50px;
     &:hover {
-      background: #ffffff;
+      background-color: #ffffff;
       color: $color_purple;
       cursor: pointer;
     }
   }
   &:hover {
-    background: #fff;
+    background-color: #fff;
     cursor: pointer;
   }
 }
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #d8d8d8;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #d8d8d8;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $color_purple;
+}
+
+/*STARS*/
+
+.stars {
+  display: inline-block;
+  vertical-align: bottom;
+  cursor: pointer;
+  margin-left: 10px;
+  &:hover {
+    .star polygon {
+      fill: #f3d132 !important;
+    }
+  }
+  .star {
+    width: 20px;
+    height: 28px;
+    float: left;
+    polygon {
+      fill: transparent;
+    }
+    &:hover~.star {
+      polygon {
+        fill: #d8d8d8 !important;
+      }
+    }
+  }
+  &[data-stars] {
+    .star polygon {
+      fill: #f3d132;
+    }
+  }
+  &[data-stars="1"] {
+    .star:nth-child(1)~.star polygon {
+      fill: #d8d8d8;
+    }
+  }
+  &[data-stars="2"] {
+    .star:nth-child(2)~.star polygon {
+      fill: #d8d8d8;
+    }
+  }
+  &[data-stars="3"] {
+    .star:nth-child(3)~.star polygon {
+      fill: #d8d8d8;
+    }
+  }
+  &[data-stars="4"] {
+    .star:nth-child(4)~.star polygon {
+      fill: #d8d8d8;
+    }
+  }
+  &[data-stars="5"] {
+    .star:nth-child(5)~.star polygon {
+      fill: #d8d8d8;
+    }
+  }
+}
+
+/*MEDIA*/
 
 @media (max-width: 1199px) {
   .tickets {
@@ -230,12 +323,12 @@
       padding-top: 20px;
     }
     &__link:first-child {
-      padding-left: 20px;
+      margin-left: 20px;
     }
-     &__info,
-     &__comments,
-     &__item
-     {
+    &__info,
+    &__comments,
+    &__item,
+    &__form {
       padding: 5px 20px;
     }
   }
@@ -284,6 +377,12 @@
     &__content {
       width: auto;
     }
+    &__comments {
+      height: auto;
+    }
+    &__desc {
+      padding-right: 0;
+    }
     &__form {
       display: flex;
       flex-direction: column;
@@ -304,13 +403,13 @@
       visibility: visible;
       &:hover {
         color: #ffffff;
-        background: $color_purple;
+        background-color: $color_purple;
         border: 2px solid #ffffff;
       }
     }
     &__item {
       &:hover {
-        background: #ffffff;
+        background-color: #ffffff;
         color: #000000;
       }
     }
@@ -331,6 +430,9 @@
     }
     &__price {
       font-size: 16px;
+    }
+    &__rank {
+      display: none;
     }
     &__btn {
       font-size: 12px;
