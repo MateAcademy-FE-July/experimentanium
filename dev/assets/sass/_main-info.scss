@@ -1,0 +1,6 @@
+.main-info {
+    @extend .location;
+    margin: 0 7rem 0 7.5rem;
+    background-color: $bgcolor__main;
+    color: $secondary_color;
+}

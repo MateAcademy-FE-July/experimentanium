@@ -7,7 +7,11 @@
   <title>Blank Template</title>
   <link rel="stylesheet" href="./assets/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,700|Roboto|Roboto+Condensed:400,700" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300i" rel="stylesheet">
+  
+  <!-- Styles for datapicker -->
+  <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" />
+  <!--  -->
 </head>
 <body>
   <div class="body-wrapper">
@@ -225,7 +229,7 @@
         <div class="info__form from">
             <form action="" class="form__visit-inf visit-inf">
                 <p class="visit-inf__header nomargin">Запланувати візит</p>
-                <input type="text" id="datepicker"  class="visit-inf__date" placeholder="Вкажiть дату">
+                    <input type="text" id="datepicker"  class="visit-inf__date" placeholder="Вкажiть дату">
                 <div class="visit-inf__time-quantity">
                     <input type="text" class="visit-inf__time" placeholder="Вкажiть час">
                     <input type="text" class="visit-inf__quantity" placeholder="Кількість квитків">
@@ -233,21 +237,6 @@
                 <button class="visit-inf__reserve" type="submit">забронювати</button>            
             </form>
         </div>
-            <script>
-                function initMap() {
-                    var uluru = { lat: 50.437929, lng: 30.5064236 };
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 14,
-                        center: uluru
-                    });
-                    var marker = new google.maps.Marker({
-                        position: uluru,
-                        map: map
-                    });
-                }
-            </script>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUd2B0XXvRSxet4Bd9EmYFkuIWiAqmic&callback=initMap">
-            </script>
     </section>
     <footer class="footer">
         <div class="footer__content">
@@ -383,10 +372,20 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="/assets/scripts/libs/jquery-3.2.1.min.js"><\/script>')</script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUd2B0XXvRSxet4Bd9EmYFkuIWiAqmic&callback=initMap">
+  </script>
+  
+  <!-- Jquery for datapicker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src=""></script>
+  <!--  -->
   
   <script src="./assets/scripts/common.js"></script>
   <script src="./assets/scripts/tabs.js"></script>
   <script src="./assets/scripts/burger.js"></script>
   <script src="./assets/scripts/slider.js"></script>
+  <script src="./assets/scripts/info.js"></script>
+  <script src="./assets/scripts/main-info.js"></script>
 </body>
 </html>
